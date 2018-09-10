@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SquaredRandoms
 {
@@ -6,14 +7,8 @@ namespace SquaredRandoms
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int randNum;
-
-            for (int i = 0; i < 4; i++)
-            {
-                randNum = random.Next(100);
-                Console.WriteLine(randNum);
-            }
+            var ranNumList = new RanNumList();
+            ranNumList.GenerateAndPrintRanNumList();
 
             Console.ReadLine();
         }
