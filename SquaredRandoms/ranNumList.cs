@@ -9,6 +9,7 @@ namespace SquaredRandoms
         Random random = new Random();
         List<int> ranNumList = new List<int>();
         List<int> ranNumListSq = new List<int>();
+        List<int> oddsRemoved = new List<int>();
 
         private void GenerateRanNumList()
         {
@@ -47,14 +48,14 @@ namespace SquaredRandoms
         {
             foreach(int item in ranNumListSq)
             {
-                if ((item % 2) != 0)
+                if((item % 2) == 0)
                 {
-                    ranNumListSq.Remove(item);
+                    oddsRemoved.Add(item);
                 }
-                else
-                {
-                    Console.WriteLine($"notOdd: {item}");
-                }
+            }
+            foreach(int item in oddsRemoved)
+            {
+                Console.WriteLine($"oddRemoves: {item}");
             }
         }
 
