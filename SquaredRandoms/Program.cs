@@ -6,7 +6,16 @@ namespace SquaredRandoms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random random = new Random();
+            int randNum;
+
+            for (int i = 0; i < 4; i++)
+            {
+                randNum = random.Next(100);
+                Console.WriteLine(randNum);
+            }
+
+            Console.ReadLine();
         }
     }
 }
